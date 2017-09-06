@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2565F75766E802CD48E5665A /* libPods-RemindWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 497FB64790BD81CFAA6656E9 /* libPods-RemindWidget.a */; };
+		E941A440B333068F71DE3FD2 /* libPods-Remind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CCDC613951F3B1EB1AC499 /* libPods-Remind.a */; };
+		F41E37301F5D40170029394E /* BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41E372F1F5D40170029394E /* BeginViewController.m */; };
+		F42CCE481F32F01A008E5503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FCA9E1F32BA9400412C5B /* Assets.xcassets */; };
+		F42CCE4A1F32F66E008E5503 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = F42CCE491F32F66E008E5503 /* bell.png */; };
+		F42FCA941F32BA9400412C5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCA931F32BA9400412C5B /* main.m */; };
+		F42FCA971F32BA9400412C5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCA961F32BA9400412C5B /* AppDelegate.m */; };
+		F42FCA9F1F32BA9400412C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42FCA9E1F32BA9400412C5B /* Assets.xcassets */; };
+		F42FCAA21F32BA9400412C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42FCAA01F32BA9400412C5B /* LaunchScreen.storyboard */; };
+		F42FCAAE1F32BCDA00412C5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAAC1F32BCDA00412C5B /* MainViewController.m */; };
+		F42FCAAF1F32BCDA00412C5B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42FCAAD1F32BCDA00412C5B /* MainViewController.xib */; };
+		F42FCAB61F32BDAF00412C5B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42FCAB51F32BDAF00412C5B /* NotificationCenter.framework */; };
+		F42FCABA1F32BDAF00412C5B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAB91F32BDAF00412C5B /* TodayViewController.m */; };
+		F42FCAC11F32BDAF00412C5B /* RemindWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F42FCAC81F32BDD800412C5B /* TodayActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */; };
+		F42FCACA1F32BED300412C5B /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = F42FCAC91F32BED300412C5B /* bell.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F42FCABF1F32BDAF00412C5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42FCA871F32BA9400412C5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F42FCAB31F32BDAF00412C5B;
+			remoteInfo = RemindWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F42FCAC51F32BDAF00412C5B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F42FCAC11F32BDAF00412C5B /* RemindWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10CCDC613951F3B1EB1AC499 /* libPods-Remind.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Remind.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1043BD17BA2829D8E03491 /* Pods-RemindWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemindWidget/Pods-RemindWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		31C670359AB5064BA10417D2 /* Pods-Remind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remind.release.xcconfig"; path = "Pods/Target Support Files/Pods-Remind/Pods-Remind.release.xcconfig"; sourceTree = "<group>"; };
+		497FB64790BD81CFAA6656E9 /* libPods-RemindWidget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RemindWidget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20409EA9875FBBBE6D3E054 /* Pods-Remind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Remind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Remind/Pods-Remind.debug.xcconfig"; sourceTree = "<group>"; };
+		F41E372E1F5D40170029394E /* BeginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeginViewController.h; sourceTree = "<group>"; };
+		F41E372F1F5D40170029394E /* BeginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeginViewController.m; sourceTree = "<group>"; };
+		F42CCE491F32F66E008E5503 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
+		F42FCA8F1F32BA9400412C5B /* Remind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42FCA931F32BA9400412C5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F42FCA951F32BA9400412C5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F42FCA961F32BA9400412C5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F42FCA9E1F32BA9400412C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F42FCAA11F32BA9400412C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F42FCAA31F32BA9400412C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42FCAAB1F32BCDA00412C5B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		F42FCAAC1F32BCDA00412C5B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		F42FCAAD1F32BCDA00412C5B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemindWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42FCAB51F32BDAF00412C5B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F42FCAB81F32BDAF00412C5B /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		F42FCAB91F32BDAF00412C5B /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		F42FCABE1F32BDAF00412C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42FCAC61F32BDD700412C5B /* TodayActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActiveViewController.h; sourceTree = "<group>"; };
+		F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActiveViewController.m; sourceTree = "<group>"; };
+		F42FCAC91F32BED300412C5B /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
+		F42FCACB1F32C2E900412C5B /* Remind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Remind.entitlements; sourceTree = "<group>"; };
+		F42FCACC1F32C32000412C5B /* RemindWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemindWidget.entitlements; sourceTree = "<group>"; };
+		FD24ACD5B3363784A417BFDE /* Pods-RemindWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemindWidget/Pods-RemindWidget.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F42FCA8C1F32BA9400412C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941A440B333068F71DE3FD2 /* libPods-Remind.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42FCAB11F32BDAF00412C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42FCAB61F32BDAF00412C5B /* NotificationCenter.framework in Frameworks */,
+				2565F75766E802CD48E5665A /* libPods-RemindWidget.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1E1229B49BC60E7287307BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10CCDC613951F3B1EB1AC499 /* libPods-Remind.a */,
+				F42FCAB51F32BDAF00412C5B /* NotificationCenter.framework */,
+				497FB64790BD81CFAA6656E9 /* libPods-RemindWidget.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C71DA621F4355C15ED9C5554 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E20409EA9875FBBBE6D3E054 /* Pods-Remind.debug.xcconfig */,
+				31C670359AB5064BA10417D2 /* Pods-Remind.release.xcconfig */,
+				1D1043BD17BA2829D8E03491 /* Pods-RemindWidget.debug.xcconfig */,
+				FD24ACD5B3363784A417BFDE /* Pods-RemindWidget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F42FCA861F32BA9400412C5B = {
+			isa = PBXGroup;
+			children = (
+				F42FCA911F32BA9400412C5B /* Remind */,
+				F42FCAB71F32BDAF00412C5B /* RemindWidget */,
+				F42FCA901F32BA9400412C5B /* Products */,
+				C71DA621F4355C15ED9C5554 /* Pods */,
+				B1E1229B49BC60E7287307BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F42FCA901F32BA9400412C5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F42FCA8F1F32BA9400412C5B /* Remind.app */,
+				F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42FCA911F32BA9400412C5B /* Remind */ = {
+			isa = PBXGroup;
+			children = (
+				F42FCACB1F32C2E900412C5B /* Remind.entitlements */,
+				F42FCA951F32BA9400412C5B /* AppDelegate.h */,
+				F42FCA961F32BA9400412C5B /* AppDelegate.m */,
+				F41E372E1F5D40170029394E /* BeginViewController.h */,
+				F41E372F1F5D40170029394E /* BeginViewController.m */,
+				F42FCAAB1F32BCDA00412C5B /* MainViewController.h */,
+				F42FCAAC1F32BCDA00412C5B /* MainViewController.m */,
+				F42FCAAD1F32BCDA00412C5B /* MainViewController.xib */,
+				F42FCA9E1F32BA9400412C5B /* Assets.xcassets */,
+				F42FCAA01F32BA9400412C5B /* LaunchScreen.storyboard */,
+				F42FCAA31F32BA9400412C5B /* Info.plist */,
+				F42CCE491F32F66E008E5503 /* bell.png */,
+				F42FCA921F32BA9400412C5B /* Supporting Files */,
+			);
+			path = Remind;
+			sourceTree = "<group>";
+		};
+		F42FCA921F32BA9400412C5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F42FCA931F32BA9400412C5B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F42FCAB71F32BDAF00412C5B /* RemindWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F42FCACC1F32C32000412C5B /* RemindWidget.entitlements */,
+				F42FCAB81F32BDAF00412C5B /* TodayViewController.h */,
+				F42FCAB91F32BDAF00412C5B /* TodayViewController.m */,
+				F42FCAC61F32BDD700412C5B /* TodayActiveViewController.h */,
+				F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */,
+				F42FCAC91F32BED300412C5B /* bell.png */,
+				F42FCABE1F32BDAF00412C5B /* Info.plist */,
+			);
+			path = RemindWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F42FCA8E1F32BA9400412C5B /* Remind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F42FCAA61F32BA9400412C5B /* Build configuration list for PBXNativeTarget "Remind" */;
+			buildPhases = (
+				EEEC1F067D7840E6BE09C810 /* [CP] Check Pods Manifest.lock */,
+				F42FCA8B1F32BA9400412C5B /* Sources */,
+				F42FCA8C1F32BA9400412C5B /* Frameworks */,
+				F42FCA8D1F32BA9400412C5B /* Resources */,
+				A98ADE391667848333A1BC21 /* [CP] Embed Pods Frameworks */,
+				CC3A41762D95FB91929BC47E /* [CP] Copy Pods Resources */,
+				F42FCAC51F32BDAF00412C5B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F42FCAC01F32BDAF00412C5B /* PBXTargetDependency */,
+			);
+			name = Remind;
+			productName = Remind;
+			productReference = F42FCA8F1F32BA9400412C5B /* Remind.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F42FCAB31F32BDAF00412C5B /* RemindWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F42FCAC21F32BDAF00412C5B /* Build configuration list for PBXNativeTarget "RemindWidget" */;
+			buildPhases = (
+				080A895808B0071F95EC6342 /* [CP] Check Pods Manifest.lock */,
+				F42FCAB01F32BDAF00412C5B /* Sources */,
+				F42FCAB11F32BDAF00412C5B /* Frameworks */,
+				F42FCAB21F32BDAF00412C5B /* Resources */,
+				ACD9A96DB1E0C4A70BE8A937 /* [CP] Embed Pods Frameworks */,
+				CE372DA132A1394394029B10 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemindWidget;
+			productName = RemindWidget;
+			productReference = F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F42FCA871F32BA9400412C5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = lyhao;
+				TargetAttributes = {
+					F42FCA8E1F32BA9400412C5B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M994FCB4FA;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F42FCAB31F32BDAF00412C5B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M994FCB4FA;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F42FCA8A1F32BA9400412C5B /* Build configuration list for PBXProject "Remind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F42FCA861F32BA9400412C5B;
+			productRefGroup = F42FCA901F32BA9400412C5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F42FCA8E1F32BA9400412C5B /* Remind */,
+				F42FCAB31F32BDAF00412C5B /* RemindWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F42FCA8D1F32BA9400412C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42FCAA21F32BA9400412C5B /* LaunchScreen.storyboard in Resources */,
+				F42FCA9F1F32BA9400412C5B /* Assets.xcassets in Resources */,
+				F42CCE4A1F32F66E008E5503 /* bell.png in Resources */,
+				F42FCAAF1F32BCDA00412C5B /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42FCAB21F32BDAF00412C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42CCE481F32F01A008E5503 /* Assets.xcassets in Resources */,
+				F42FCACA1F32BED300412C5B /* bell.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		080A895808B0071F95EC6342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A98ADE391667848333A1BC21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remind/Pods-Remind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD9A96DB1E0C4A70BE8A937 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemindWidget/Pods-RemindWidget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3A41762D95FB91929BC47E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remind/Pods-Remind-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE372DA132A1394394029B10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemindWidget/Pods-RemindWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEEC1F067D7840E6BE09C810 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F42FCA8B1F32BA9400412C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41E37301F5D40170029394E /* BeginViewController.m in Sources */,
+				F42FCA971F32BA9400412C5B /* AppDelegate.m in Sources */,
+				F42FCAAE1F32BCDA00412C5B /* MainViewController.m in Sources */,
+				F42FCA941F32BA9400412C5B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F42FCAB01F32BDAF00412C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42FCAC81F32BDD800412C5B /* TodayActiveViewController.m in Sources */,
+				F42FCABA1F32BDAF00412C5B /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F42FCAC01F32BDAF00412C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F42FCAB31F32BDAF00412C5B /* RemindWidget */;
+			targetProxy = F42FCABF1F32BDAF00412C5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F42FCAA01F32BA9400412C5B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F42FCAA11F32BA9400412C5B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F42FCAA41F32BA9400412C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F42FCAA51F32BA9400412C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F42FCAA71F32BA9400412C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E20409EA9875FBBBE6D3E054 /* Pods-Remind.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Remind/Remind.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M994FCB4FA;
+				INFOPLIST_FILE = Remind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		F42FCAA81F32BA9400412C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31C670359AB5064BA10417D2 /* Pods-Remind.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Remind/Remind.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M994FCB4FA;
+				INFOPLIST_FILE = Remind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		F42FCAC31F32BDAF00412C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1043BD17BA2829D8E03491 /* Pods-RemindWidget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RemindWidget/RemindWidget.entitlements;
+				DEVELOPMENT_TEAM = M994FCB4FA;
+				INFOPLIST_FILE = RemindWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind.RemindWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F42FCAC41F32BDAF00412C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD24ACD5B3363784A417BFDE /* Pods-RemindWidget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RemindWidget/RemindWidget.entitlements;
+				DEVELOPMENT_TEAM = M994FCB4FA;
+				INFOPLIST_FILE = RemindWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind.RemindWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F42FCA8A1F32BA9400412C5B /* Build configuration list for PBXProject "Remind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42FCAA41F32BA9400412C5B /* Debug */,
+				F42FCAA51F32BA9400412C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F42FCAA61F32BA9400412C5B /* Build configuration list for PBXNativeTarget "Remind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42FCAA71F32BA9400412C5B /* Debug */,
+				F42FCAA81F32BA9400412C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F42FCAC21F32BDAF00412C5B /* Build configuration list for PBXNativeTarget "RemindWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42FCAC31F32BDAF00412C5B /* Debug */,
+				F42FCAC41F32BDAF00412C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F42FCA871F32BA9400412C5B /* Project object */;
+}
