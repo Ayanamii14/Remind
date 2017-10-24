@@ -11,6 +11,12 @@
 #import "MainViewController.h"
 #import <UserNotifications/UserNotifications.h>
 
+#ifdef DEBUG
+    #import "TXFPSCalculator.h"
+#endif
+
+extern CFAbsoluteTime StartTime;
+
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
@@ -19,9 +25,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    #ifdef DEBUG
+        //帧数计算
+//        [[TXFPSCalculator calculator] start];
+    #endif
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //非用户直接启动的情况：如从微信跳转到APP  直接进入首页
+    //从其他页面跳转到时
     if (launchOptions) {
         MainViewController *mainVC = [[MainViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];

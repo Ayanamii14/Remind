@@ -6,7 +6,7 @@
 //  Copyright © 2017年 lyhao. All rights reserved.
 //  作为RemindWidget的操作界面
 
-#import <UIKit/UIKit.h>
+#import "TodaySuperViewController.h"
 
 @protocol TodayActiveViewControllerDelegate <NSObject>
 
@@ -14,9 +14,9 @@
 
 @end
 
-@interface TodayActiveViewController : UIViewController
+@interface TodayActiveViewController : TodaySuperViewController
 
-@property (weak, nonatomic) id<TodayActiveViewControllerDelegate> delegate;
+@property (weak, nonatomic) id<TodayActiveViewControllerDelegate> TAdelegate;
 
 @property (copy, nonatomic) NSString *preInputString;
 

@@ -13,8 +13,8 @@ typedef NS_ENUM(NSInteger, ClockDateComponents) {
     ClockDateComponentsHour
 };
 
-typedef void(^animationFinish)();
-typedef void(^strokeEndAnimation)();
+typedef void(^animationFinish)(void);
+typedef void(^strokeEndAnimation)(void);
 
 @interface BeginViewController : UIViewController
 

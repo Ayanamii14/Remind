@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import <UserNotifications/UserNotifications.h>
+#import "TomatoViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -34,6 +35,7 @@
 
 - (void)defaultValueViewStyle {
     self.tableView.rowHeight = 50;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)msgGet {
@@ -48,35 +50,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"番茄";
+    }
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 1;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return @"每日提醒";
-    }
-    else if (section == 1) {
-        return @"临时提醒";
-    }
-    else {
-        return @"";
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        TomatoViewController *tVC = [[TomatoViewController alloc] init];
+        [self.navigationController pushViewController:tVC animated:YES];
     }
 }
 

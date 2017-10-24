@@ -61,7 +61,6 @@
 
 - (void)addCircle {
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(POINT / 2, POINT / 2) radius:0.3 * POINT startAngle:0 endAngle:2 * M_PI clockwise:YES];
-
     _circleLayer = [CAShapeLayer layer];
     _circleLayer.path = path.CGPath;
     //填充色
