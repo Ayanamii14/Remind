@@ -9,6 +9,7 @@
 #import "TodayActiveViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "TodayToolView.h"
+#import "todayModel.h"
 
 @interface TodayActiveViewController ()<TodayToolViewDelegate>
 
@@ -42,37 +43,17 @@
     return dateComponent;
 }
 
-- (NSMutableArray *)analysisStrings:(NSString *)strings {
-    NSMutableArray *tempArr = [NSMutableArray array];
-    
-    return tempArr;
-}
-
 - (void)error:(NSString *)errorMsg {
     self.inputTextField.text = @"";
     self.inputTextField.placeholder = errorMsg;
 }
 
-#pragma mark - TodaySuperViewControllerDelegate
+#pragma mark - super method
 - (void)todayAddAction {
     if ([self.inputTextField.text isEqualToString:@""] || self.inputTextField.text == nil) {
         self.inputTextField.placeholder = @"不写点东西咋提醒呢？";
     }
     else {
-        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.lyhao.Remind"];
-        NSMutableArray *tempMutArr;
-        if (![userDefaults objectForKey:@"note"]) {
-            tempMutArr = [NSMutableArray array];
-            [tempMutArr addObject:self.inputTextField.text];
-        }
-        else {
-            tempMutArr = [[NSMutableArray alloc] initWithArray:[userDefaults objectForKey:@"note"]];
-            [tempMutArr addObject:self.inputTextField.text];
-        }
-        [userDefaults setObject:tempMutArr forKey:@"note"];
-        [userDefaults synchronize];
-        [tempMutArr removeAllObjects];
-        
         //收起键盘
         [self.inputTextField resignFirstResponder];
         
@@ -131,6 +112,13 @@
                     [self error:@"格式不对哦.."];
                     return;
                 }
+                //存
+                NSString *file = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"myToday.data"];
+                NSMutableArray *muta = [NSMutableArray array];
+                [muta addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:file]];
+                [muta addObject:self.widgetInputString];
+                [NSKeyedArchiver archiveRootObject:muta toFile:file];
+                
                 //发起通知
                 [self notificationWithDateMethod:timesStateArr
                                             hour:[hourMinArr[0] integerValue]
@@ -151,6 +139,7 @@
 - (BOOL)todayTextFieldShouldBeginEditing:(UITextField *)textField {
     //tool
     self.inputTextField.inputAccessoryView = self.toolView;
+    
     return YES;
 }
 
@@ -163,6 +152,10 @@
         }
     }];
     return YES;
+}
+
+- (void)todayActiveAction {
+    
 }
 
 #pragma mark - notification
@@ -263,6 +256,9 @@
     NSString *s = self.inputTextField.text;
     s = [s stringByAppendingString:@"@"];
     self.inputTextField.text = s;
+    [self.inputTextField resignFirstResponder];
+    self.inputTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    [self.inputTextField becomeFirstResponder];
 }
 
 #pragma mark - init

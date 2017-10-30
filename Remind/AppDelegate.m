@@ -11,12 +11,6 @@
 #import "MainViewController.h"
 #import <UserNotifications/UserNotifications.h>
 
-#ifdef DEBUG
-    #import "TXFPSCalculator.h"
-#endif
-
-extern CFAbsoluteTime StartTime;
-
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
@@ -25,10 +19,6 @@ extern CFAbsoluteTime StartTime;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    #ifdef DEBUG
-        //帧数计算
-//        [[TXFPSCalculator calculator] start];
-    #endif
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //从其他页面跳转到时
     if (launchOptions) {
@@ -84,7 +74,6 @@ extern CFAbsoluteTime StartTime;
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    application.applicationIconBadgeNumber --;
 }
 
 
@@ -100,7 +89,6 @@ extern CFAbsoluteTime StartTime;
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    application.applicationIconBadgeNumber --;
 }
 
 @end

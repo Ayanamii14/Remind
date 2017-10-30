@@ -7,9 +7,10 @@
 //
 
 #import "TodayToolView.h"
-#import <Masonry.h>
+#import "Masonry.h"
 #define SW [UIScreen mainScreen].bounds.size.width
 #define BTNWIDTH 44
+#define TOMATOCOLOR(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @implementation TodayToolView
 
@@ -24,6 +25,10 @@
 #pragma mark - init
 - (void)initUI {
     self.backgroundColor = [UIColor whiteColor];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(BTNWIDTH, 0, SW-BTNWIDTH, BTNWIDTH)];
+    scrollView.contentSize = CGSizeMake(310, 0);
+    [self addSubview:scrollView];
     
     UIView *recvKeyBoardView = [[UIView alloc] init];
     [self addSubview:recvKeyBoardView];
@@ -51,10 +56,10 @@
     [recvKeyBoardBtn addTarget:self action:@selector(recvKeyBoardAction:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *thingsLabel = [[UILabel alloc] init];
-    [self addSubview:thingsLabel];
+    [scrollView addSubview:thingsLabel];
     [thingsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(recvKeyBoardView.mas_right).offset(13);
-        make.top.equalTo(self.mas_top);
+        make.left.equalTo(scrollView.mas_left).offset(13);
+        make.top.equalTo(scrollView.mas_top);
         make.width.equalTo(@BTNWIDTH);
         make.height.equalTo(@BTNWIDTH);
     }];
@@ -63,10 +68,10 @@
     thingsLabel.textAlignment = NSTextAlignmentCenter;
     
     UIButton *separatorBtn = [[UIButton alloc] init];
-    [self addSubview:separatorBtn];
+    [scrollView addSubview:separatorBtn];
     [separatorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(thingsLabel.mas_right);
-        make.top.equalTo(self.mas_top).offset(4);
+        make.top.equalTo(scrollView.mas_top).offset(4);
         make.width.equalTo(@(BTNWIDTH - 8));
         make.height.equalTo(@(BTNWIDTH - 8));
     }];
@@ -74,22 +79,22 @@
     [separatorBtn addTarget:self action:@selector(outputSeparator:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *modelBtn = [[UIButton alloc] init];
-    [self addSubview:modelBtn];
+    [scrollView addSubview:modelBtn];
     [modelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(separatorBtn.mas_right);
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(scrollView.mas_top);
         make.width.equalTo(@BTNWIDTH);
         make.height.equalTo(@BTNWIDTH);
     }];
     [modelBtn setTitle:@"每天" forState:UIControlStateNormal];
-    [modelBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [modelBtn setTitleColor:TOMATOCOLOR(216, 30, 6, 1) forState:UIControlStateNormal];
     [modelBtn addTarget:self action:@selector(outputEveryDay:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *orLabel = [[UILabel alloc] init];
-    [self addSubview:orLabel];
+    [scrollView addSubview:orLabel];
     [orLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(modelBtn.mas_right);
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(scrollView.mas_top);
         make.width.equalTo(@(BTNWIDTH/2));
         make.height.equalTo(@BTNWIDTH);
     }];
@@ -98,22 +103,22 @@
     orLabel.textAlignment = NSTextAlignmentCenter;
     
     UIButton *tempBtn = [[UIButton alloc] init];
-    [self addSubview:tempBtn];
+    [scrollView addSubview:tempBtn];
     [tempBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(orLabel.mas_right);
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(scrollView.mas_top);
         make.width.equalTo(@BTNWIDTH);
         make.height.equalTo(@BTNWIDTH);
     }];
     [tempBtn setTitle:@"临时" forState:UIControlStateNormal];
-    [tempBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [tempBtn setTitleColor:TOMATOCOLOR(216, 30, 6, 1) forState:UIControlStateNormal];
     [tempBtn addTarget:self action:@selector(outputTemp:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *atBtn = [[UIButton alloc] init];
-    [self addSubview:atBtn];
+    [scrollView addSubview:atBtn];
     [atBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(tempBtn.mas_right).offset(18);
-        make.top.equalTo(self.mas_top).offset(9.5);
+        make.left.equalTo(tempBtn.mas_right).offset(12);
+        make.top.equalTo(scrollView.mas_top).offset(9.5);
         make.width.equalTo(@24);
         make.height.equalTo(@24);
     }];
@@ -121,10 +126,10 @@
     [atBtn addTarget:self action:@selector(outputAt:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *timeLabel = [[UILabel alloc] init];
-    [self addSubview:timeLabel];
+    [scrollView addSubview:timeLabel];
     [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(atBtn.mas_right).offset(18);
-        make.top.equalTo(self.mas_top);
+        make.left.equalTo(atBtn.mas_right).offset(12);
+        make.top.equalTo(scrollView.mas_top);
         make.width.equalTo(@BTNWIDTH);
         make.height.equalTo(@BTNWIDTH);
     }];

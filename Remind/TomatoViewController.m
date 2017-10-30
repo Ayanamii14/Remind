@@ -14,8 +14,10 @@
     int left, right, tomato;
     NSTimer *timer;
 }
-@property (weak, nonatomic) IBOutlet UILabel *leftTime;
-@property (weak, nonatomic) IBOutlet UILabel *rightTime;
+@property (weak, nonatomic) IBOutlet UILabel *left10Time;
+@property (weak, nonatomic) IBOutlet UILabel *left01Time;
+@property (weak, nonatomic) IBOutlet UILabel *right10Time;
+@property (weak, nonatomic) IBOutlet UILabel *right01Time;
 @property (weak, nonatomic) IBOutlet UILabel *tomatoCount;
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;
 @property (weak, nonatomic) IBOutlet UIButton *resetBtn;
@@ -52,8 +54,15 @@
     //minuters
     left = 25;
     right = 0;
-    self.leftTime.text = left < 10 ? [NSString stringWithFormat:@"0%d", left] : [NSString stringWithFormat:@"%d", left];
-    self.rightTime.text = right < 10 ? [NSString stringWithFormat:@"0%d", right] : [NSString stringWithFormat:@"%d", right];
+    
+    //十
+    self.left10Time.text = @"2";
+    //个
+    self.left01Time.text = @"5";
+    //十
+    self.right10Time.text = @"0";
+    //个
+    self.right01Time.text = @"0";
 }
 
 - (void)countDown {
@@ -71,9 +80,34 @@
             //seconds
             right = 59;
         }
-        self.leftTime.text = left < 10 ? [NSString stringWithFormat:@"0%d", left] : [NSString stringWithFormat:@"%d", left];
-        self.rightTime.text = right < 10 ? [NSString stringWithFormat:@"0%d", right] : [NSString stringWithFormat:@"%d", right];
+        //十
+        self.left10Time.text = [self divtime:left][0];
+        //个
+        self.left01Time.text = [self divtime:left][1];
+        //十
+        self.right10Time.text = [self divtime:right][0];
+        //个
+        self.right01Time.text = [self divtime:right][1];
     }
+}
+
+/**
+ 返回被划分的时间
+
+ @param time 时间整型
+ @return 数组
+ */
+- (NSArray *)divtime:(NSInteger)time {
+    NSMutableArray *muta = [[NSMutableArray alloc] init];
+    if (time < 10) {
+        [muta addObject:@"0"];
+        [muta addObject:[NSString stringWithFormat:@"%ld", time]];
+    }
+    else {
+        [muta addObject:[NSString stringWithFormat:@"%ld", time / 10]];
+        [muta addObject:[NSString stringWithFormat:@"%ld", time % 10]];
+    }
+    return muta;
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -84,10 +118,7 @@
     [self.navigationController setNavigationBarHidden:isShowHomePage animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+#pragma mark - button action
 - (IBAction)startAction:(id)sender {
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     self.startBtn.userInteractionEnabled = NO;
@@ -107,6 +138,5 @@
 - (IBAction)backAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 @end

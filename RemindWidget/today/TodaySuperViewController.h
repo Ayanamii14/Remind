@@ -15,5 +15,4 @@
 - (void)todayTextFieldDidBeginEditing:(UITextField *)textField;
 - (BOOL)todayTextFieldShouldBeginEditing:(UITextField *)textField;
 - (BOOL)todayTextFieldShouldReturn:(UITextField *)textField;
-
 @end

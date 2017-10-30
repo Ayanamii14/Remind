@@ -139,7 +139,6 @@
     _hourLayer.lineJoin = kCALineJoinRound;
     _hourLayer.strokeEnd = 0;
     [self.clockView.layer addSublayer:_hourLayer];
-
 }
 
 - (void)actionAnimation {

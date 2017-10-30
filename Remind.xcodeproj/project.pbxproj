@@ -19,17 +19,18 @@
 		F42FCAAE1F32BCDA00412C5B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAAC1F32BCDA00412C5B /* MainViewController.m */; };
 		F42FCAAF1F32BCDA00412C5B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42FCAAD1F32BCDA00412C5B /* MainViewController.xib */; };
 		F42FCAB61F32BDAF00412C5B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42FCAB51F32BDAF00412C5B /* NotificationCenter.framework */; };
-		F42FCABA1F32BDAF00412C5B /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAB91F32BDAF00412C5B /* TodayViewController.m */; };
 		F42FCAC11F32BDAF00412C5B /* RemindWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F42FCAC81F32BDD800412C5B /* TodayActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */; };
+		F43B966D1FA6F79D0030D200 /* todayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F43B96611FA6F79D0030D200 /* todayModel.m */; };
+		F43B966E1FA6F79D0030D200 /* TodayActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43B96651FA6F79D0030D200 /* TodayActiveViewController.m */; };
+		F43B966F1FA6F79D0030D200 /* TodaySuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43B96671FA6F79D0030D200 /* TodaySuperViewController.m */; };
+		F43B96701FA6F79D0030D200 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43B96691FA6F79D0030D200 /* TodayViewController.m */; };
+		F43B96741FA6F7C00030D200 /* xie.png in Resources */ = {isa = PBXBuildFile; fileRef = F43B96711FA6F7C00030D200 /* xie.png */; };
+		F43B96751FA6F7C00030D200 /* dao3.png in Resources */ = {isa = PBXBuildFile; fileRef = F43B96721FA6F7C00030D200 /* dao3.png */; };
+		F43B96761FA6F7C00030D200 /* at.png in Resources */ = {isa = PBXBuildFile; fileRef = F43B96731FA6F7C00030D200 /* at.png */; };
 		F441F31A1F9F0AFE008F513C /* TodayToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = F441F3191F9F0AFE008F513C /* TodayToolView.m */; };
-		F441F31E1F9F137A008F513C /* dao3.png in Resources */ = {isa = PBXBuildFile; fileRef = F441F31D1F9F137A008F513C /* dao3.png */; };
-		F441F3221F9F2017008F513C /* at.png in Resources */ = {isa = PBXBuildFile; fileRef = F441F3211F9F2017008F513C /* at.png */; };
-		F441F3241F9F2273008F513C /* xie.png in Resources */ = {isa = PBXBuildFile; fileRef = F441F3231F9F2273008F513C /* xie.png */; };
 		F441F3261F9F274F008F513C /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = F441F3251F9F274F008F513C /* bell.png */; };
 		F47855E41F9DD2F90057C6BF /* TomatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47855E21F9DD2F90057C6BF /* TomatoViewController.m */; };
 		F47855E51F9DD2F90057C6BF /* TomatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F47855E31F9DD2F90057C6BF /* TomatoViewController.xib */; };
-		F4899FE21F9DB816004D7584 /* TodaySuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4899FE11F9DB816004D7584 /* TodaySuperViewController.m */; };
 		F489E27A1F8DE80C00A3143C /* TXFPSCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F489E2771F8DE78800A3143C /* TXFPSCalculator.m */; };
 		F489E27B1F8DE80C00A3143C /* TXTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F489E2791F8DE78800A3143C /* TXTimerProxy.m */; };
 /* End PBXBuildFile section */
@@ -79,24 +80,26 @@
 		F42FCAAD1F32BCDA00412C5B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F42FCAB41F32BDAF00412C5B /* RemindWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemindWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42FCAB51F32BDAF00412C5B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		F42FCAB81F32BDAF00412C5B /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		F42FCAB91F32BDAF00412C5B /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		F42FCABE1F32BDAF00412C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F42FCAC61F32BDD700412C5B /* TodayActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActiveViewController.h; sourceTree = "<group>"; };
-		F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActiveViewController.m; sourceTree = "<group>"; };
 		F42FCACB1F32C2E900412C5B /* Remind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Remind.entitlements; sourceTree = "<group>"; };
-		F42FCACC1F32C32000412C5B /* RemindWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RemindWidget.entitlements; sourceTree = "<group>"; };
+		F43B96601FA6F79D0030D200 /* todayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = todayModel.h; sourceTree = "<group>"; };
+		F43B96611FA6F79D0030D200 /* todayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = todayModel.m; sourceTree = "<group>"; };
+		F43B96631FA6F79D0030D200 /* RemindWidget.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RemindWidget.entitlements; sourceTree = "<group>"; };
+		F43B96641FA6F79D0030D200 /* TodayActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActiveViewController.h; sourceTree = "<group>"; };
+		F43B96651FA6F79D0030D200 /* TodayActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActiveViewController.m; sourceTree = "<group>"; };
+		F43B96661FA6F79D0030D200 /* TodaySuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodaySuperViewController.h; sourceTree = "<group>"; };
+		F43B96671FA6F79D0030D200 /* TodaySuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodaySuperViewController.m; sourceTree = "<group>"; };
+		F43B96681FA6F79D0030D200 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		F43B96691FA6F79D0030D200 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		F43B96711FA6F7C00030D200 /* xie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xie.png; sourceTree = "<group>"; };
+		F43B96721FA6F7C00030D200 /* dao3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dao3.png; sourceTree = "<group>"; };
+		F43B96731FA6F7C00030D200 /* at.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at.png; sourceTree = "<group>"; };
 		F441F3181F9F0AFE008F513C /* TodayToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayToolView.h; sourceTree = "<group>"; };
 		F441F3191F9F0AFE008F513C /* TodayToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayToolView.m; sourceTree = "<group>"; };
-		F441F31D1F9F137A008F513C /* dao3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dao3.png; sourceTree = "<group>"; };
-		F441F3211F9F2017008F513C /* at.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at.png; sourceTree = "<group>"; };
-		F441F3231F9F2273008F513C /* xie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xie.png; sourceTree = "<group>"; };
 		F441F3251F9F274F008F513C /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = Remind/bell.png; sourceTree = SOURCE_ROOT; };
 		F47855E11F9DD2F90057C6BF /* TomatoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TomatoViewController.h; sourceTree = "<group>"; };
 		F47855E21F9DD2F90057C6BF /* TomatoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomatoViewController.m; sourceTree = "<group>"; };
 		F47855E31F9DD2F90057C6BF /* TomatoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TomatoViewController.xib; sourceTree = "<group>"; };
-		F4899FE01F9DB815004D7584 /* TodaySuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodaySuperViewController.h; sourceTree = "<group>"; };
-		F4899FE11F9DB816004D7584 /* TodaySuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodaySuperViewController.m; sourceTree = "<group>"; };
 		F489E2761F8DE78800A3143C /* TXFPSCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFPSCalculator.h; sourceTree = "<group>"; };
 		F489E2771F8DE78800A3143C /* TXFPSCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXFPSCalculator.m; sourceTree = "<group>"; };
 		F489E2781F8DE78800A3143C /* TXTimerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXTimerProxy.h; sourceTree = "<group>"; };
@@ -201,28 +204,54 @@
 		F42FCAB71F32BDAF00412C5B /* RemindWidget */ = {
 			isa = PBXGroup;
 			children = (
+				F43B965E1FA6F79D0030D200 /* Base.lproj */,
+				F43B965F1FA6F79D0030D200 /* model */,
 				F441F3171F9F0ACB008F513C /* resourse */,
+				F43B96621FA6F79D0030D200 /* today */,
 				F441F3181F9F0AFE008F513C /* TodayToolView.h */,
 				F441F3191F9F0AFE008F513C /* TodayToolView.m */,
-				F42FCACC1F32C32000412C5B /* RemindWidget.entitlements */,
-				F4899FE01F9DB815004D7584 /* TodaySuperViewController.h */,
-				F4899FE11F9DB816004D7584 /* TodaySuperViewController.m */,
-				F42FCAB81F32BDAF00412C5B /* TodayViewController.h */,
-				F42FCAB91F32BDAF00412C5B /* TodayViewController.m */,
-				F42FCAC61F32BDD700412C5B /* TodayActiveViewController.h */,
-				F42FCAC71F32BDD800412C5B /* TodayActiveViewController.m */,
 				F42FCABE1F32BDAF00412C5B /* Info.plist */,
 			);
 			path = RemindWidget;
 			sourceTree = "<group>";
 		};
+		F43B965E1FA6F79D0030D200 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		F43B965F1FA6F79D0030D200 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F43B96601FA6F79D0030D200 /* todayModel.h */,
+				F43B96611FA6F79D0030D200 /* todayModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F43B96621FA6F79D0030D200 /* today */ = {
+			isa = PBXGroup;
+			children = (
+				F43B96631FA6F79D0030D200 /* RemindWidget.entitlements */,
+				F43B96641FA6F79D0030D200 /* TodayActiveViewController.h */,
+				F43B96651FA6F79D0030D200 /* TodayActiveViewController.m */,
+				F43B96661FA6F79D0030D200 /* TodaySuperViewController.h */,
+				F43B96671FA6F79D0030D200 /* TodaySuperViewController.m */,
+				F43B96681FA6F79D0030D200 /* TodayViewController.h */,
+				F43B96691FA6F79D0030D200 /* TodayViewController.m */,
+			);
+			path = today;
+			sourceTree = "<group>";
+		};
 		F441F3171F9F0ACB008F513C /* resourse */ = {
 			isa = PBXGroup;
 			children = (
+				F43B96731FA6F7C00030D200 /* at.png */,
+				F43B96721FA6F7C00030D200 /* dao3.png */,
+				F43B96711FA6F7C00030D200 /* xie.png */,
 				F441F3251F9F274F008F513C /* bell.png */,
-				F441F31D1F9F137A008F513C /* dao3.png */,
-				F441F3231F9F2273008F513C /* xie.png */,
-				F441F3211F9F2017008F513C /* at.png */,
 			);
 			path = resourse;
 			sourceTree = "<group>";
@@ -271,7 +300,6 @@
 				F42FCAB01F32BDAF00412C5B /* Sources */,
 				F42FCAB11F32BDAF00412C5B /* Frameworks */,
 				F42FCAB21F32BDAF00412C5B /* Resources */,
-				ACD9A96DB1E0C4A70BE8A937 /* [CP] Embed Pods Frameworks */,
 				CE372DA132A1394394029B10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -348,11 +376,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F441F3241F9F2273008F513C /* xie.png in Resources */,
+				F43B96741FA6F7C00030D200 /* xie.png in Resources */,
 				F441F3261F9F274F008F513C /* bell.png in Resources */,
 				F42CCE481F32F01A008E5503 /* Assets.xcassets in Resources */,
-				F441F3221F9F2017008F513C /* at.png in Resources */,
-				F441F31E1F9F137A008F513C /* dao3.png in Resources */,
+				F43B96751FA6F7C00030D200 /* dao3.png in Resources */,
+				F43B96761FA6F7C00030D200 /* at.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,13 +393,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemindWidget-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A98ADE391667848333A1BC21 /* [CP] Embed Pods Frameworks */ = {
@@ -387,21 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remind/Pods-Remind-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACD9A96DB1E0C4A70BE8A937 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemindWidget/Pods-RemindWidget-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC3A41762D95FB91929BC47E /* [CP] Copy Pods Resources */ = {
@@ -440,13 +456,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Remind-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,10 +489,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43B966F1FA6F79D0030D200 /* TodaySuperViewController.m in Sources */,
+				F43B966E1FA6F79D0030D200 /* TodayActiveViewController.m in Sources */,
 				F441F31A1F9F0AFE008F513C /* TodayToolView.m in Sources */,
-				F4899FE21F9DB816004D7584 /* TodaySuperViewController.m in Sources */,
-				F42FCAC81F32BDD800412C5B /* TodayActiveViewController.m in Sources */,
-				F42FCABA1F32BDAF00412C5B /* TodayViewController.m in Sources */,
+				F43B966D1FA6F79D0030D200 /* todayModel.m in Sources */,
+				F43B96701FA6F79D0030D200 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "TomatoViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -19,14 +20,6 @@
 
 @implementation MainViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgGet) name:UIApplicationDidBecomeActiveNotification object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,12 +29,6 @@
 - (void)defaultValueViewStyle {
     self.tableView.rowHeight = 50;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-}
-
-- (void)msgGet {
-    //把数据得保存起来
-    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.lyhao.Remind"];
-    self.dataArr = [[NSMutableArray alloc] initWithArray:[userDefaults valueForKey:@"note"]];
 }
 
 #pragma mark - tableview
