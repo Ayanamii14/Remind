@@ -322,6 +322,7 @@
 				TargetAttributes = {
 					F42FCA8E1F32BA9400412C5B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 23DLV7ATD9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -331,6 +332,7 @@
 					};
 					F42FCAB31F32BDAF00412C5B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 23DLV7ATD9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -629,7 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23DLV7ATD9;
 				INFOPLIST_FILE = Remind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind;
@@ -644,7 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23DLV7ATD9;
 				INFOPLIST_FILE = Remind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind;
@@ -657,7 +659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D1043BD17BA2829D8E03491 /* Pods-RemindWidget.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23DLV7ATD9;
 				INFOPLIST_FILE = RemindWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind.RemindWidget;
@@ -670,7 +672,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD24ACD5B3363784A417BFDE /* Pods-RemindWidget.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 23DLV7ATD9;
 				INFOPLIST_FILE = RemindWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyhao.Remind.RemindWidget;
