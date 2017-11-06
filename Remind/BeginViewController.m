@@ -238,8 +238,7 @@
 #pragma mark - 根据当前时间来确定时针，分针所指向的位置
 - (CGPoint)getEndPointWithClockDateComponents:(ClockDateComponents)clockDateComponents{
     CGPoint point;
-    CGFloat radian;
-    CGFloat x = 0.0,y = 0.0,r = 0.0;
+    CGFloat x = 0.0,y = 0.0,r = 0.0,radian = 0.0;
     NSDateComponents *date = [self getCurrentTime];
     if (clockDateComponents == ClockDateComponentsMinute) {
         radian = (M_PI * 2 / 60) * date.minute;
