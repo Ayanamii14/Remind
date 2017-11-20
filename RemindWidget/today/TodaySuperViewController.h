@@ -4,7 +4,7 @@
 //
 //  Created by lyhao on 2017/10/23.
 //  Copyright © 2017年 lyhao. All rights reserved.
-//
+//  界面父类
 
 #import <UIKit/UIKit.h>
 

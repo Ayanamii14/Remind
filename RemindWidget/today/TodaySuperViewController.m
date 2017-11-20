@@ -53,7 +53,7 @@
         [self.dataArr removeAllObjects];
         [self.dataArr addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithFile:file]];
         //变化的
-        self.preferredContentSize = CGSizeMake(SW, self.tableview.rowHeight * self.dataArr.count + 110);
+        self.preferredContentSize = CGSizeMake(SW, 50 * self.dataArr.count + 110);
         [self.tableview reloadData];
     }
 }
